@@ -1,0 +1,58 @@
+{
+    "config": {
+        "step": {
+            "station": {
+                "data": {
+                    "direction": "Direction",
+                    "line": "Line"
+                }
+            },
+            "user": {
+                "data": {
+                    "from": "Start"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "delay": {
+                "name": "Delay"
+            },
+            "departure0": {
+                "name": "Departure"
+            },
+            "departure1": {
+                "name": "Departure +1"
+            },
+            "departure2": {
+                "name": "Departure +2"
+            },
+            "duration": {
+                "name": "Duration"
+            },
+            "platform": {
+                "name": "Platform"
+            },
+            "transfers": {
+                "name": "Transfers"
+            }
+        }
+    },
+    "services": {
+        "fetch_connections": {
+            "description": "Fetch a list of connections from the citura.",
+            "fields": {
+                "config_entry_id": {
+                    "description": "Citura instance to fetch connections for.",
+                    "name": "Instance"
+                },
+                "limit": {
+                    "description": "Number of connections to fetch from [1-15]",
+                    "name": "Limit"
+                }
+            },
+            "name": "Fetch Connections"
+        }
+    }
+}

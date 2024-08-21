@@ -1,0 +1,14 @@
+{
+    "domain": "citura",
+    "name": "Citura",
+    "codeowners": [
+        "@florianDes"
+    ],
+    "config_flow": true,
+    "dependencies": [],
+    "documentation": "https://www.home-assistant.io/integrations/citura",
+    "iot_class": "cloud_polling",
+    "loggers": [
+        "citura"
+    ]
+}
