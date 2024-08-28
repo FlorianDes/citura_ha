@@ -62,15 +62,12 @@ class CituraDataUpdateCoordinator(DataUpdateCoordinator[list[DataConnection]]):
         self._citura.limit = limit
         try:
             await self._citura.async_get_data()
-            _LOGGER.warning(self._citura.data)
+
         except Exception as e:
-            #     _LOGGER.warning("Connection to transport.opendata.ch cannot be established")
-            #     raise UpdateFailed from e
-            # except OpendataTransportError as e:
-            #     _LOGGER.warning(
-            #         "Unable to connect and retrieve data from transport.opendata.ch"
-            #     )
+            _LOGGER.warning(
+                "Connection to catp-reims.airweb.fr cannot be established")
             raise UpdateFailed from e
+
         connections = self._citura.data
         return [
             DataConnection(
