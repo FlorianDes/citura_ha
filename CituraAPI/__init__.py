@@ -120,7 +120,7 @@ class CituraAPI:
         if not self.station_id:
             await self.async_get_station()
         params = {}
-        params["line"] = self.line
+        params["line_id"] = self.line
         params["stopPoint"] = self.station_id
         params["max"] = self.limit
         url = self.get_url("SIRI/getSIRIWithErrors.json", params)
